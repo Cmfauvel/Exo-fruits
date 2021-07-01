@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr class="head">
+      <th class="col" (click)="onSortByName()">Name </th>
+      <th class="col" (click)="onSortByColor()">Color</th>
+      <th class="col" (click)="onSortByWeight()">Weight</th>
+      <th class="col" (click)="onSortByPrice()">Price</th>
+    </tr>
+    </thead>
+    <tbody class="rows">
+    <tr class="row" *ngFor="let fruit of listFruits; let i">
+      <td id="{{ fruit.name }}">{{ fruit.name }}</td>
+      <td>
+        {{ fruit.color }}
+      </td>
+      <td>{{ fruit.weight | number }} g</td>
+      <td>{{ fruit.price }} €</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
